@@ -1,0 +1,140 @@
+html body{
+  margin: 0px;
+  padding: 0px;
+}
+.head_top{
+  height: 40px;
+  width: 100%;
+  font-family: 'helvetica neue',tahoma,'hiragino sans gb',stheiti,'wenquanyi micro hei';
+  background: url("/newgame/xoyo/image/header-bg-1.png");
+}
+#head_top_cen{
+  width:980px;
+  height:100%;
+  margin:0px auto;
+  position:relative;
+}
+#head_top_cen li{
+  float:left;
+  list-style: none;
+}
+#logo{
+  height: 31px;
+  width:220px;
+  float:left;
+  border-right:#CDC9C9 1px solid;
+  margin-top:4px;
+  position:relative;
+  z-index: 3;
+}
+#logo img{
+  width:100%;
+  height: 100%;
+}
+#head_top_cen ul{
+  float:right;
+  padding:0;
+  margin:0;;
+  position: relative;
+  z-index: 3;
+}
+#head_top_cen li{
+  float:left;
+  line-height: 40px;
+  display: block;
+  cursor:pointer;
+  font-family: "宋体";
+  font-size: 13px;
+  position: relative;
+}
+.head_block{
+  width:114px;
+  height: 39px;
+  text-align:center;
+  background:url("/newgame/xoyo/image/xoyo_sprite.png");
+  background-position: -118px -130px;
+  background-repeat:no-repeat;
+}
+.head_icon{
+  background-image:url("/newgame/xoyo/image/xoyo_sprite.png");
+  background-position:-100px 0;
+  display: inline-block;
+  background-repeat:no-repeat;
+  width: 24px;
+  height: 24px;
+  margin:8px 5px 0px 0px;
+  float:left;
+}
+.head_login{
+  background-position:-114px 0px;
+}
+.head_regist{
+  background-position:-139px 0px;
+}
+.head_ul_left{
+  margin-right: 20px;
+}
+.head_advert{
+  float:left;
+  position:relative;
+  z-index:1;
+}
+.head_advert a{
+  display: block;
+}
+.head_advert img{
+  cursor:pointer;
+  width: 232px;
+  height: 38px;
+}
+.head_advert_main{
+  position:absolute;
+  width: 980px;
+  height:185px;
+  overflow: hidden;
+  top:0px;
+  z-index: 1;
+  display: none
+}
+.nav_body{
+  height: 75px;
+  background: url("/newgame/xoyo/image/menu_bg.jpg");
+}
+.nav_main{
+  width: 1000px;
+  height: 100%;
+  margin:0 auto;
+}
+.nav_main ul{
+  padding:0;
+  margin:0;
+  height: 75px;
+  width: 100%;
+  display: table;
+  position: relative;
+  cursor:pointer;
+}
+.nav_main li{
+  margin:0;;
+  padding:0;
+  list-style: none;
+  float:left;
+  width:120px;
+  height:74px;
+  text-align:center;
+  line-height: 74px;
+  font-family: 'helvetica neue',tahoma,'hiragino sans gb',stheiti,'wenquanyi micro hei',\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif;
+  font-weight: 700;
+  color: #926d01;
+}
+.nav_main a{
+  display: block;
+}
+#nav_move_line{
+  display: block;
+  position: absolute;
+  top:69px;
+  height: 5px;
+  width: 120px;
+  background: red;
+}

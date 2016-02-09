@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<meta name="copyright" content="">
+<link style="text/css" rel="stylesheet" href="css/xoyo.css">
+</head>
+  <body>
+    <div class="head_top" >
+      <div id="head_top_cen">
+        <div id="logo"><img src="image/logo.png"></div>
+        <div class="head_advert"><a onmouseover="show_advert()" ><img src="image/head_advert.jpg"></a></div>
+        <ul>
+          <li class="head_ul_left"><a><span class="head_icon head_login"></span>登陆</a></li>
+          <li class="head_ul_left"><a><span class="head_icon head_regist"></span>注册</a></li>
+          <li><div style="border-left:#DEDEDE 1px solid;
+            border-right:#DEDEDE 1px solid;" class="head_block">服务列表</div></li>
+          <li><div style="border-right:#DEDEDE 1px solid;" class="head_block">猴子游戏</div></li>
+        </ul>
+        <div class="head_advert_main" onmouseout="hide_advert()"><a href="http://www.baidu.com"><img src="image/head_advert_main.jpg"></a></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="nav_body">
+        <div class="nav_main">
+          <ul>
+            <li><a>首页</a></li>
+            <li><a>游戏中心</a></li>
+            <li><a>活动中心</a></li>
+            <li><a>安全中心</a></li>
+            <li><a>充值中心</a></li>
+            <li><a>客服中心</a></li>
+            <li><a>网吧专版</a></li>
+            <li><a>玩家社区</a></li>
+            <li id="nav_move_line" style="left:0px" ></li>
+          </ul>
+        </div>
+      </div>
+      <div>
+      </div>
+    </div>
+    <script src="js/xoyo.js"></script>
+    <script>
+    var arr_li =  document.getElementsByClassName("nav_main")[0].getElementsByTagName("li");
+    for(var i=0;i<arr_li.length;i++){
+      if(i==8)continue;
+      arr_li[i].setAttribute("onmouseover","nav_move_line("+i+")");
+      arr_li[i].setAttribute("onmouseout","refash_nav_move_line()")
+    }
+
+    function nav_move_line(num){
+      var i_width = (num)*120;
+      var str_now_width = document.getElementById("nav_move_line").style.left;
+      var i_now_width = str_now_width.replace("px","");
+      var i_result = 0;
+      var str_width = "";
+      if(i_now_width!=i_width){
+        i_result = i_width-i_now_width;
+      }
+      if(i_result == 0){
+        return false;
+      }else if(i_result > 0){
+        str_width = Number(i_now_width)+Number(10)+"px";
+        document.getElementById("nav_move_line").style.left=str_width;
+        return setTimeout(nav_move_line(num),1000*5);
+      }else if(i_result < 0){
+        str_width = Number(i_now_width)-Number(10)+"px";
+        document.getElementById("nav_move_line").style.left=str_width;
+        return setTimeout(nav_move_line(num),1000*5);
+      }
+    }
+
+    function refash_nav_move_line(){
+      document.getElementById("nav_move_line").style.left="0px";
+    }
+    function nav_clock(){
+
+    }
+    </script>
+  </body>
+</html>
