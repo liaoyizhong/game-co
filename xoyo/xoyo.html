@@ -27,7 +27,7 @@
     <div>
       <div class="nav_body">
         <div class="nav_main">
-          <ul>
+          <ul id="nav_ul">
             <li><a>首页</a></li>
             <li><a>游戏中心</a></li>
             <li><a>活动中心</a></li>
@@ -43,14 +43,17 @@
       <div>
       </div>
     </div>
-    <script src="js/xoyo.js"></script>
+    <div class="advtisement"></div>
+
     <script>
     var arr_li =  document.getElementsByClassName("nav_main")[0].getElementsByTagName("li");
     for(var i=0;i<arr_li.length;i++){
       if(i==8)continue;
       arr_li[i].setAttribute("onmouseover","nav_move_line("+i+")");
-      arr_li[i].setAttribute("onmouseout","refash_nav_move_line()")
     }
+
+    document.getElementById("nav_ul").setAttribute("onmouseleave","refash_nav_move_line()")
+
 
     function nav_move_line(num){
       var i_width = (num)*120;
@@ -59,27 +62,34 @@
       var i_result = 0;
       var str_width = "";
       if(i_now_width!=i_width){
-        i_result = i_width-i_now_width;
+        i_result = i_width - i_now_width;
       }
+
       if(i_result == 0){
         return false;
       }else if(i_result > 0){
         str_width = Number(i_now_width)+Number(10)+"px";
-        document.getElementById("nav_move_line").style.left=str_width;
-        return setTimeout(nav_move_line(num),1000*5);
+        document.getElementById("nav_move_line").style.left = str_width;
+        return setTimeout("nav_move_line("+num+")",1*1);
       }else if(i_result < 0){
         str_width = Number(i_now_width)-Number(10)+"px";
-        document.getElementById("nav_move_line").style.left=str_width;
-        return setTimeout(nav_move_line(num),1000*5);
+        document.getElementById("nav_move_line").style.left = str_width;
+        return setTimeout("nav_move_line("+num+")",1*1)
       }
     }
 
     function refash_nav_move_line(){
-      document.getElementById("nav_move_line").style.left="0px";
-    }
-    function nav_clock(){
+      var s_width = document.getElementById("nav_move_line").style.left;
+      var i_width = 0;
+      i_width = s_width.replace("px","");
+      if(i_width==0)return false;
+      i_width = i_width - 10;
+      if(i_width==0)return false;
+      document.getElementById("nav_move_line").style.left= i_width+"px";
 
+      return setTimeout("refash_nav_move_line()",6*1);
     }
+
     </script>
   </body>
 </html>
