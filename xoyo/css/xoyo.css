@@ -6,7 +6,7 @@ html body{
   height: 40px;
   width: 100%;
   font-family: 'helvetica neue',tahoma,'hiragino sans gb',stheiti,'wenquanyi micro hei';
-  background: url("/newgame/xoyo/image/header-bg-1.png");
+  background: url("../image/header-bg-1.png");
 }
 #head_top_cen{
   width:980px;
@@ -51,12 +51,12 @@ html body{
   width:114px;
   height: 39px;
   text-align:center;
-  background:url("/newgame/xoyo/image/xoyo_sprite.png");
+  background:url("../image/xoyo_sprite.png");
   background-position: -118px -130px;
   background-repeat:no-repeat;
 }
 .head_icon{
-  background-image:url("/newgame/xoyo/image/xoyo_sprite.png");
+  background-image:url("../image/xoyo_sprite.png");
   background-position:-100px 0;
   display: inline-block;
   background-repeat:no-repeat;
@@ -98,7 +98,7 @@ html body{
 }
 .nav_body{
   height: 75px;
-  background: url("/newgame/xoyo/image/menu_bg.jpg");
+  background: url("../image/menu_bg.jpg");
 }
 .nav_main{
   width: 1000px;
